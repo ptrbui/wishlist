@@ -1,0 +1,123 @@
+/* Styling for the title container */
+#blog-title {
+    max-width: 300px; /* Align with the paragraph box width */
+    margin: 0 auto; /* Center the title container */
+    padding: 16px 16px 8px; /* Add padding for spacing */
+    text-align: center; /* Center-align the text */
+    box-sizing: border-box;
+}
+
+/* Styling for the title text */
+#blog-title h1 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 17px;
+    font-weight: normal;
+    margin: 25px;
+    color: #333;
+}
+
+/* General styling for the blog container */
+#blog-container {
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 250px;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+
+/* Styling for paragraphs */
+#blog-container p {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 200;
+    font-size: 12px;
+    line-height: 1.6;
+    margin-bottom: 17px;
+    text-align: justify;
+}
+
+/* General link styling for all colors */
+a {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Matches surrounding text color */
+}
+
+/* Red highlight */
+.red:hover {
+    background-color: red;
+    color: yellow;
+    font-size: 1.2em; /* Increase text size */
+    font-weight: bold; /* Make text bold */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Blue highlight */
+.blue:hover {
+    background-color: blue;
+    color: yellow;
+    font-size: 1.2em; /* Increase text size */
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Green highlight */
+.green:hover {
+    background-color: green;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Purple highlight */
+.purple:hover {
+    background-color: purple;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Orange highlight */
+.orange:hover {
+    background-color: orange;
+    color: black;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Black highlight */
+.black:hover {
+    background-color: black;
+    color: gold;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Dropdown paragraphs hidden by default */
+.dropdown {
+    display: none;
+    font-size: 12px;
+    font-style: italic;
+    margin-left: 20px;
+}
+
+/* Optional styling for color names */
+span {
+    cursor: pointer;
+}
+
+
+/* Ensure proper behavior on very small screens */
+@media (max-width: 480px) {
+    #blog-title, #blog-container {
+        padding: 0 8px;
+    }
+}
