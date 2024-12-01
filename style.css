@@ -16,6 +16,15 @@
     color: #333;
 }
 
+/* Styling for the title text */
+#blog-title h2 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 17px;
+    font-weight: normal;
+    margin: 10px;
+    color: #333;
+}
+
 /* General styling for the blog container */
 #blog-container {
     max-width: 500px;
@@ -35,22 +44,38 @@
     text-align: justify;
 }
 
-/* Centering container for the Spider-Man image */
-#spiderman-container {
-    display: flex; /* Enable flexbox */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    height: 75vh; /* Full viewport height */
-    box-sizing: border-box;
+/* Styling for the audio controls */
+#audio-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0px;
 }
 
-/* Styling for the Spider-Man image */
-#spiderman-image {
-    width: 200px; /* Static width */
-    height: auto; /* Maintain aspect ratio */
-    display: block;
-    margin: 0 auto; /* Horizontal fallback for non-flexbox scenarios */
+#volume-slider {
+    width: 100px; /* Adjust as needed */
+    margin-top: 0px;
 }
+
+/* Ensure the video container centers its content */
+#video-container {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 100%; /* Full width of the container */
+    height: 100%; /* Adjust as needed to fill the container */
+    margin: 35px 0; /* Keep consistent spacing */
+    overflow: hidden; /* Hide any overflow */
+}
+
+/* Make the video responsive and maintain its aspect ratio */
+#freddy-video {
+    max-width: 100%; /* Ensure video scales down to fit */
+    max-height: 100%; /* Prevent overflow vertically */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure proper layout */
+}
+
 
 /* General link styling for all colors */
 a {
