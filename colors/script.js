@@ -1,25 +1,31 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const colorSpans = document.querySelectorAll("span[data-color]");
-    let activeDropdown = null;
+    const colorSpans = document.querySelectorAll("span[data-color], span[data-link]");
 
     colorSpans.forEach(span => {
-        span.addEventListener("click", () => {
+        span.addEventListener("click", (event) => {
+            const link = span.getAttribute("data-link");
+
+            if (link) {
+                // Open the link in a new window
+                window.open(link, "_blank");
+                return; // Exit early to avoid toggling dropdown
+            }
+
+            // Handle dropdown toggling for spans without a data-link
             const color = span.getAttribute("data-color");
             const dropdown = document.getElementById(`${color}-dropdown`);
 
-            // Close the currently active dropdown if it's not the same
-            if (activeDropdown && activeDropdown !== dropdown) {
-                activeDropdown.style.display = "none";
+            if (dropdown) {
+                const isDropdownVisible = dropdown.style.display === "block";
+                // Hide all dropdowns
+                document.querySelectorAll(".dropdown").forEach(d => d.style.display = "none");
+
+                // Toggle current dropdown
+                dropdown.style.display = isDropdownVisible ? "none" : "block";
             }
 
-            // Toggle the clicked dropdown
-            if (dropdown.style.display === "block") {
-                dropdown.style.display = "none";
-                activeDropdown = null;
-            } else {
-                dropdown.style.display = "block";
-                activeDropdown = dropdown;
-            }
+            // Prevent default behavior for dropdown spans
+            event.preventDefault();
         });
     });
 });
