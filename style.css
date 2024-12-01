@@ -35,6 +35,23 @@
     text-align: justify;
 }
 
+/* Centering container for the Spider-Man image */
+#spiderman-container {
+    display: flex; /* Enable flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 75vh; /* Full viewport height */
+    box-sizing: border-box;
+}
+
+/* Styling for the Spider-Man image */
+#spiderman-image {
+    width: 200px; /* Static width */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: 0 auto; /* Horizontal fallback for non-flexbox scenarios */
+}
+
 /* General link styling for all colors */
 a {
     text-decoration: none; /* Removes underline */
@@ -105,7 +122,6 @@ a {
 .dropdown {
     display: none;
     font-size: 12px;
-    font-style: italic;
     margin-left: 20px;
 }
 
